@@ -1,0 +1,62 @@
+.drop-down {
+  width: 50vw;
+  height: 50vh;
+  background-color: rgba(16, 8, 47, 0.75);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 2rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.drop-down form label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.drop-down form span {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: -5px;
+}
+
+.drop-down-input {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 16px;
+  border: 1px solid rgba(208, 213, 221, 0.1);
+  background: #12133b;
+  margin-top: 6px;
+  color: var(--text-primary);
+}
+
+.drop-down form input::placeholder {
+  color: var(--text-secondary);
+}
+
+.drop-down form .submit-button {
+  width: 100%;
+  background: linear-gradient(#12133b, #12133b) padding-box,
+    linear-gradient(to bottom, var(--gradient-color-1), var(--gradient-color-2))
+      border-box;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.terms-link {
+  color: var(--gradient-color-1);
+}
+
+@media (max-width: 480px) {
+  .drop-down {
+    width: 100vw;
+  }
+}

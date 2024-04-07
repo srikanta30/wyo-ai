@@ -1,0 +1,52 @@
+.web-category-selection-container {
+  display: flex;
+  width: 100%;
+  padding: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.web-category-selection-inner-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  align-self: stretch;
+}
+
+.web-category-selection-title {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.web-category-selection-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  flex: 1 0 0;
+}
+
+.web-category-men {
+  display: flex;
+  width: 212px;
+  height: 85px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 12px;
+  background: #1a142c;
+  padding: 20px;
+}
+
+.web-category-text {
+  color: #4d818a;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

@@ -1,0 +1,47 @@
+.carousal-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousal-container > img {
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid rgb(0, 145, 255);
+}
+
+.carousal-container > img:nth-child(1), .carousal-container > img:nth-child(5) {
+    height: 80%;
+    z-index: 1;
+    filter: brightness(0.5);
+}
+
+.carousal-container > img:nth-child(2), .carousal-container > img:nth-child(4) {
+    height: 90%;
+    z-index: 2;
+    filter: brightness(0.8);
+}
+
+.carousal-container > img:nth-child(3) {
+    height: 100%;
+    z-index: 3;
+}
+
+.carousal-container > img:nth-child(1) {
+    left: 0;
+}
+.carousal-container > img:nth-child(2) {
+    left: 12.5%;
+}
+.carousal-container > img:nth-child(3) {
+    left: 25%;
+}
+.carousal-container > img:nth-child(4) {
+    right: 12.5%;
+}
+.carousal-container > img:nth-child(5) {
+    right: 0;
+}

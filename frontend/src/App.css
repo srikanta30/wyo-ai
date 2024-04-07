@@ -1,0 +1,23 @@
+.decorative-sphere {
+  width: 126px;
+  height: 137px;
+  opacity: 0.6;
+  background: linear-gradient(
+    0deg,
+    var(--gradient-color-1) 0%,
+    var(--gradient-color-2) 100%
+  );
+  filter: blur(75px);
+  position: absolute;
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+}
+
+.center-left {
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+}

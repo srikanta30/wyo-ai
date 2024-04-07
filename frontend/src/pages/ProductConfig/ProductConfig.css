@@ -1,0 +1,120 @@
+.product-page {
+  padding: 2rem var(--body-horizontal-padding);
+  display: flex;
+  gap: 2rem;
+  row-gap: 2rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.product-img-container {
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid #fa00ff;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2px);
+  text-align: center;
+}
+
+.product-configuration-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  max-width: 100%;
+}
+
+.config-selector-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.config-selector {
+  display: flex;
+  max-width: 100%;
+  gap: 1rem;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.config-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.selected-config-img {
+  background: linear-gradient(var(--bg-primary), var(--bg-primary)) padding-box,
+    linear-gradient(to bottom, var(--gradient-color-1), var(--gradient-color-2))
+      border-box;
+  border: 2px solid transparent;
+}
+
+.config-size {
+  background-color: rgba(28, 30, 63, 0.91);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+}
+
+.config-size-selected {
+  background: linear-gradient(rgba(28, 30, 63, 0.91), rgba(28, 30, 63, 0.91))
+      padding-box,
+    linear-gradient(to bottom, var(--gradient-color-1), var(--gradient-color-2))
+      border-box;
+  border: 2px solid transparent;
+}
+
+.space-btwn {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.pink-underline {
+  color: var(--gradient-color-2);
+  text-decoration: underline;
+}
+
+.product-actions-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.product-actions-container > * {
+  flex: 1;
+  text-align: center;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.product-img-container > img:nth-child(1) {
+  width: 400px;
+  height: auto;
+}
+
+@media screen and (max-width: 480px) {
+  .product-img-container > img:nth-child(1) {
+    width: 50vw;
+  }
+}
+
+.selected-decoration-img-over-t {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 42%;
+  border-radius: 8px;
+  object-fit: cover;
+  padding: max(5%, 5px);
+  box-sizing: border-box;
+  border: 1px dashed gray;
+}

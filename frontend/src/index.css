@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #040630;
+
+  --navbar-bg-primary: rgba(0, 0, 0, 0.37);
+  --navbar-border-bottom: 1px solid rgba(161, 146, 206, 0.2);
+  --navbar-actionables-bg: #12133b;
+  --navbar-bg-secondary: rgba(12, 0, 19, 0.81);
+
+  --text-primary: #fff;
+  --text-secondary: rgba(255, 255, 255, 0.6);
+
+  --gradient-color-1: #b742ff;
+  --gradient-color-2: #ff007a;
+
+  --body-horizontal-padding: 6rem;
+
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--text-primary);
+}
+
+.pink-underline {
+  color: var(--gradient-color-2);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  /* overflow-x: hidden; */
+  background-color: var(--bg-primary);
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+button {
+  all: unset;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    --body-horizontal-padding: 3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    --body-horizontal-padding: 1rem;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Dialog */
+.dialog-backdrop {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 480px) {
+  .dialog-backdrop {
+    justify-content: flex-end;
+  }
+  .dialog-backdrop > * {
+    animation: comeUp 0.3s ease-in-out both;
+  }
+}
+
+@keyframes comeUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Messages */
+.messages {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  z-index: 101;
+  gap: 1rem;
+}
+
+.message {
+  width: min(300px, 60vw);
+  border: 2px solid;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #ffffff30;
+  backdrop-filter: blur(10px);
+}
+
+.warning {
+  border-color: yellow;
+}
+.error {
+  border-color: #ff0000;
+}
+.success {
+  border-color: #00ff00;
+}
+.info {
+  border-color: #00bfff;
+}

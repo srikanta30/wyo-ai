@@ -1,0 +1,109 @@
+nav {
+  padding: 12px var(--body-horizontal-padding);
+  background-color: var(--navbar-bg-primary);
+  border-bottom: var(--navbar-border-bottom);
+  backdrop-filter: blur(1px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 5;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.nav-link {
+  cursor: pointer;
+}
+
+.menu-icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.actionable-link {
+  padding: 16px 32px;
+  background-color: var(--navbar-actionables-bg);
+  backdrop-filter: blur(30.5px);
+  border-radius: 8px;
+}
+
+.login-button {
+  background: linear-gradient(
+        var(--navbar-actionables-bg),
+        var(--navbar-actionables-bg)
+      )
+      padding-box,
+    linear-gradient(to bottom, var(--gradient-color-1), var(--gradient-color-2))
+      border-box;
+  border: 2px solid transparent;
+}
+
+@media screen and (max-width: 1100px) {
+  nav {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .nav-links {
+    height: 100vh;
+    padding: 4rem 2rem;
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    align-items: stretch;
+    width: max(50vw, 250px);
+    overflow: hidden;
+
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .open-nav {
+    transform: translateX(0);
+  }
+
+  .close-button {
+    all: unset;
+    z-index: 10;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: max(calc(50vw + 8px), 258px);
+    box-shadow: 1px 1px 4px rgba(1, 1, 1, 0.25);
+    animation: close-button 0.3s ease-in-out;
+  }
+
+  .nav-links > * {
+    width: fit-content;
+  }
+
+  .nav-links > .actionable-link {
+    width: auto;
+  }
+
+  .actionable-link {
+    text-align: center;
+  }
+}
+
+@keyframes close-button {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: max(calc(50vw + 8px), 258px);
+  }
+}

@@ -1,0 +1,30 @@
+.custom-prompt-page {
+  padding: 2rem var(--body-horizontal-padding);
+  text-align: center;
+}
+
+.custom-prompt-input {
+  width: 100%;
+  min-height: 200px;
+  background: linear-gradient(var(--bg-primary), var(--bg-primary)) padding-box,
+    linear-gradient(to bottom, var(--gradient-color-2), var(--gradient-color-1))
+      border-box;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 8px;
+  box-sizing: border-box;
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.custom-prompt-input:focus {
+  outline: none;
+}
+
+.generate-btn {
+  padding: 1rem 2rem;
+  background: linear-gradient(180deg, #b742ff 0%, #ff007a 100%);
+  border-radius: 8px;
+  width: min(50vw, 140px);
+  cursor: pointer;
+}
